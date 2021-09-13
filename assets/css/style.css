@@ -1,49 +1,254 @@
-@import url('https://fonts.googleapis.com/css2?family=Manjari&family=Montserrat&display=swap');
+ 
 
-* {
-    margin: 0;
-    padding: 0;
-    border: none;
+/*Responsive navbar*/
+
+nav {
+    display: flex;
+	justify-content: space-around;
+	align-items: center;
+	min-height: 4vh;
+	background-color: rgba(185, 36, 9, 0.986);
+	font-family: ;
+    margin-bottom: 30px;
 }
+
+.logo {
+    color: rgb(238, 226, 226);
+	text-transform: uppercase;
+	letter-spacing: 5px; 
+        margin: 0px;
+		padding: 0px;
+		box-sizing: border-box;
+		font-size: 20px;
+			
+}
+
+.nav-links {
+
+	display: flex;
+	justify-content: space-around;
+	width: 40%;
+}
+
+.nav-links li{
+      list-style: none;
+
+}
+
+.nav-links a{
+            color:rgb(238, 226, 226);  ;
+            text-decoration: none;
+			letter-spacing: 3px;
+			font-weight: bold;
+			font-size: 14px;
+}
+
+.burger{
+	display: none;
+	cursor: pointer;
+}
+
+.burger div {
+     width: 25px;
+	 height: 3px;
+	 background-color: black;
+	 margin: 5px;
+
+}
+
+/* hero image */
+
+#hero-image {
+	height: 600px;
+	width: 100%;
+	background: url(../images/cinhero-image.jpg) no-repeat center center;
+}
+
+/* start button for home page */
+
+
+@media screen and (max-width:1024px){
+      .nav-links{
+		  width: 60%;
+	  }
+
+}
+
+@media screen and (max-width:768px){
+         body{
+			 overflow-x: hidden;
+		 }
+	
+	     .nav-links{
+         position: absolute;
+		 right: 0px;
+		 height: 92vh;
+		 top: 8vh;
+		 background-color: rgb(214, 238, 158);
+         display: flex;
+		 flex-direction: column;
+		 align-items: center;
+		 width: 50%;
+		 transform: translateX(100%);
+		 transition: transform 0.5s ease-in;
+		 }
+
+        .nav-links li{
+			opacity: 0;
+		}
+		.burger{
+			display: block;
+		}
+}
+
+
+/*quiz to be made responsive*/
+
+#quiz {
+	margin-left: 330px;
+	background: #b3f1f3;
+	padding: 10px 20px 10px 20px;
+	width: 400px;
+	border-radius: 20px;
+	float: left;
+
+}
+
+
+.nav-active{
+
+	transform: translateX(0%);
+
+}
+
+@keyframes navLinkFade{
+     from{
+      opacity: 0;
+	  transform: translateX(50px);
+	 }
+	 to{
+		 opacity: 1;
+		 transform: translateX(0px);
+		 
+	 }
+
+	 }
+
+
+	
+
+
+
 
 body {
-    font-family: Manjari, sans-serif;
-    font-weight: 300;
-    color: black;
-    background-color: #bbccff;
+	font-family: 'Lato', sans-serif;
 }
-
-/* headings and logo */
 
 h1, h2 {
-font-family: Manjari, sans-serif;
-letter-spacing: 4px;
-color: #252525;
-   
+    text-align: center;
 }
 
-#logo {
-    
-    font-size: 280%;
-   
-   
-    
+#quiz {
+	margin-left: 330px;
+	background: #b3f1f3;
+	padding: 10px 20px 10px 20px;
+	width: 400px;
+	border-radius: 20px;
+	float: left;
+
 }
 
-/* navigation links */
 
-#menu {
-    font-size: 110%;
-    letter-spacing: 4px;
-    
-    height: 100px;
-    line-height: 50px;
-    text-decoration: none;
+
+input {
+	margin-bottom: 20px;
+	display: block;
 }
 
-#menu li {
-   
+#textbox {
+	height: 25px;
+	font-size: 16px;
+	border-radius: 5px;
+	border: none;
+	padding-left: 5px;
 }
+
+
+#button {
+	background: green;
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+	color: white;
+	font-size: 16px;
+	transition-duration: .5s;
+	margin-top: 15px;
+}
+
+
+
+#button:hover {
+	background: white;
+	border: 1px solid green;
+	color: black;
+	cursor: pointer;
+
+}
+
+#after_submit {
+	visibility: hidden;
+	background:#f3e1e1; 
+	padding: 10px 20px 10px 20px;
+	width: 400px;
+	border-radius: 20px;
+	float: left;
+	margin-left: 20px;
+	font-size: 30px;
+
+
+}
+
+#picture {
+	width: 375px;
+	height: 245px;
+}
+
+
+
+.mc {
+	display: inline;
+} 
+
+
+
+
+/* footer */
+
+footer {
+    height: 120px;
+	background-color: rgba(185, 36, 9, 0.986);
+	min-height: ;
+
+}
+
+.social-networks {
+    text-align: center;
+}
+
+.social-networks > li {
+    display: inline;
+	
+}
+
+.social-networks i {
+    font-size: 160%;
+    margin: 1%;
+    padding: 5%;
+    color: rgb(238, 226, 226);
+}
+
+
+
 
 
 
